@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}Philosphy Books{% endblock %}</title>
+    <link href="{% static 'main2.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'favicon.ico' %}" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="topbanner">
+            <img src="{% static 'banner.png' %}" width="1598" height="114" alt=""/>
+        </div>
+		<nav id="nav">
+            <ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/authors">Authors</a></li>
+				<li><a href="/books">Books</a></li>
+                <li><a href="/rate">Rate a Book</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        {% block content %}
+        <!-- Content goes here, extend this template in other HTML files -->
+        {% endblock %}
+    </main>
+
+    <footer id="footer">
+        Copyright &copy; 2024 Humayun Awan
+    </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Authors{% endblock %}
+
+{% block content %}
+<h2>Authors</h2>
+<a href="{% url 'author_create' %}"><button class="btn">Add Author</button></a>
+
+{% for author in object_list %}
+    <div>
+        <h3>{{ author.author_name }}</h3>
+        <p>{{ author.author_summary }}</p>
+        <a href="{% url 'author_detail' author.id %}"><button class="btn">Details</button></a>
+        <a href="{% url 'author_update' author.id %}"><button class="btn">Edit</button></a>
+        <a href="{% url 'author_delete' author.id %}"><button class="btn">Delete</button></a>
+    </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.author_name }} Details{% endblock %}
+
+{% block content %}
+<h2>{{ object.author_name }} Books</h2>
+
+<ul>
+    <a href="{% url 'book_create' %}?author={{ object.id }}"><button class="btn">Add Book</button></a>
+    {% for book in object.book_set.all %}
+        <li><h3>{{ book.book_title }}</h3></li>
+        <li><p>{{ book.book_summary }}</p></li>
+        <a href="{% url 'book_update' book.id %}"><button class="btn">Edit Book</button></a>
+        <a href="{% url 'book_delete' book.id %}"><button class="btn">Delete Book</button></a>
+    {% endfor %}
+</ul>
+<img src="{{ object.pic.url }}" width="300" height="300" alt=""/>
+{% endblock %}

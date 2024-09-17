@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* Base styling for modern look */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+#header {
+  width: 100%; /* Full width for a modern look */
+  height: auto;
+}
+
+/* Wrapper styling for center alignment and a sleek background */
+#wrapper {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff; /* White background for a clean, modern look */
+  max-width: 1200px; /* Maximum width for a modern layout */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding for inner spacing */
+}
+
+/* Body styling for overall background and typography */
+body {
+  background-color: #f0f0f0; /* Light grey background for a neutral look */
+  font-family: Arial, sans-serif; /* Standard sans-serif font for modern feel */
+  font-size: 16px; /* Standard font size for readability */
+  color: #333; /* Darker text for better contrast */
+  line-height: 1.6; /* Spacing for readability */
+}
+
+/* Footer styling with a modern touch */
+#footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* Consistent with wrapper background */
+  border-top: 2px solid #ececec; /* Light border for a clean separation */
+  color: #333; /* Darker font for contrast */
+}
+
+#nav {
+    background-color: #333; /* Dark background for contrast */
+    text-align: center; /* Center-align the navigation items */
+    width: 100%; /* Full width */
+  }
+  
+  #nav ul {
+    list-style-type: none;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the list items */
+    padding: 15px 0; /* Padding for spacing */
+    flex-wrap: wrap; /* Wrap items to new line if not enough space */
+    margin: 0 auto; /* Centering the menu if it's narrower than its container */
+  }
+  
+  #nav li {
+    padding: 0 20px; /* Horizontal padding */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  #nav li a {
+    text-decoration: none;
+    color: #fff; /* White text for readability against dark bg */
+    font-weight: bold; /* Bold font for emphasis */
+    display: block; /* Makes the padding effective */
+  }
+  
+  
+/* Sidebar styling */
+#leftsidebar {
+  width: 200px; /* Width of the sidebar */
+  padding: 20px; /* Padding for aesthetics */
+  float: none; /* Remove float for a block layout */
+  clear: both; /* Clear float */
+}
+
+/* Main content area styling */
+#main {
+  width: calc(100% - 240px); /* Calculate width dynamically */
+  margin: 20px auto; /* Centering the main content */
+  padding: 20px; /* Padding for text */
+  background-color: #fff; /* Clear background for main content area */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for modern feel */
+}
+
+/* Logo styling */
+#logo {
+  margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #nav ul {
+    flex-direction: column; /* Stack nav items vertically on smaller screens */
+  }
+  
+  #main, #leftsidebar {
+    width: 100%; /* Full width for small screens */
+  }
+}

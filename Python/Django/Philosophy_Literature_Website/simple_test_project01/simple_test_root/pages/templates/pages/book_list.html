@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Books{% endblock %}
+
+{% block content %}
+<h2>Book List</h2>
+<a href="{% url 'book_create' %}"><button class="btn">Add Book</button></a>
+
+<ul>
+    {% for book in book_list %}
+        <li>{{ book.book_title }} ({{ book.author.author_name }})
+            <a href="{% url 'book_update' book.id %}"><button class="btn">Edit Book</button></a>
+            <a href="{% url 'book_delete' book.id %}"><button class="btn">Delete Book</button></a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

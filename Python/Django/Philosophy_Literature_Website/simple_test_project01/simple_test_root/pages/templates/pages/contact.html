@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Page{% endblock %}
+
+{% block content %}
+
+<h1>Contact Us</h1>
+
+{% if submitted %}
+<p>Thank you for your message.</p>
+{% else %}
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <label for="id_your_name">Your Name:</label>
+        {{ form.your_name }}
+    </div>
+    <div>
+        <label for="id_email">Your E-mail Address (optional):</label>
+        {{ form.email }}
+    </div>
+    <div>
+        <label for="id_subject">Subject:</label>
+        {{ form.subject }}
+    </div>
+    <div>
+        <label for="id_message">Message:</label>
+        {{ form.message }}
+    </div>
+    <div>
+        <button type="submit">Send</button>
+    </div>
+</form>
+{% endif %}
+{% endblock %}

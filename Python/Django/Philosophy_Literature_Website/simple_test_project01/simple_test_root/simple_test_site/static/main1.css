@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* Header styling */
+#header {
+	border-style: none;
+	width: 800px;
+	height: auto;
+}
+
+/* Wrapper styling for center alignment and background */
+#wrapper {
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f5f0e6; /* Warm cream background */
+	width: 800px;
+}
+
+/* Body styling for overall background and typography */
+body {
+	background-color: #dcd0c0; /* Soft parchment-like background */
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Elegant serif font */
+	font-size: 1em; /* Slightly larger font for readability */
+	text-align: justify;
+	color: #333333; /* Darker text for better contrast */
+}
+
+/* Footer styling with a classical touch */
+#footer {
+	text-align: center;
+	font-size: 0.9em;
+	margin-top: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #f5f0e6; /* Consistent with wrapper background */
+	border-top: 2px solid #a4978e; /* Subtle border for a classic look */
+	clear: both;
+	color: #666666; /* Soft gray for a less stark appearance */
+}
+
+/* Navigation list styling */
+#nav li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 1.1em; /* Slightly larger for emphasis */
+	list-style-type: none;
+	border-bottom: 1px solid #a4978e; /* Lighter border for elegance */
+	color: #5a4745; /* Warm brown for a rich, inviting look */
+	list-style-position: inside;
+	margin-left: -10px;
+}
+
+/* Link styling in the navigation */
+#nav li a {
+	text-decoration: none;
+	color: #5a4745; /* Ensure link color matches the list */
+}
+
+/* Sidebar styling */
+#leftsidebar {
+	width: 180px;
+	height: auto; /* Auto height for flexibility */
+	float: left;
+	background-color: #e7dfd6; /* Lighter side background for contrast */
+	padding: 10px; /* Padding for aesthetics */
+}
+
+/* Main content area styling */
+#main {
+	width: 560px;
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+	padding-right: 20px; /* Increased padding for a better text frame */
+	background-color: #fff; /* Clear background for main content area */
+}
+
+/* Logo styling */
+#logo {
+	padding: 20px; /* More padding for a pronounced effect */
+}

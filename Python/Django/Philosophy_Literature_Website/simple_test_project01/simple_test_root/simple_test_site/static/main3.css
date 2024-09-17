@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/* Base styling for modern look */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+#header {
+  width: 100%; /* Full width for a modern look */
+  height: auto;
+}
+
+/* Wrapper styling for flexbox layout */
+#wrapper {
+    display: flex; /* Enable flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    align-items: flex-start; /* Align items to the top */
+    /* ... other styles remain unchanged */
+  }
+
+/* Body styling for overall background and typography */
+body {
+  background-color: #f0f0f0; /* Light grey background for a neutral look */
+  font-family: Arial, sans-serif; /* Standard sans-serif font for modern feel */
+  font-size: 16px; /* Standard font size for readability */
+  color: #333; /* Darker text for better contrast */
+  line-height: 1.6; /* Spacing for readability */
+}
+
+/* Footer styling with a modern touch */
+#footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* Consistent with wrapper background */
+  border-top: 2px solid #ececec; /* Light border for a clean separation */
+  color: #333; /* Darker font for contrast */
+}
+
+#nav {
+    background-color: #333; /* Dark background for contrast */
+    text-align: center; /* Center-align the navigation items */
+    width: 100%; /* Full width */
+  }
+  
+/* Ensure nav list stacks vertically */
+#nav ul {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;
+  }
+  
+  /* Ensure list items take full width of sidebar */
+  #nav li {
+    width: 100%; /* Make list items full width */
+    padding: 10px 0; /* Adjust padding for list items */
+  }
+  
+  /* Remove padding from nav links and adjust style as needed */
+  #nav li a {
+    padding: 10px 20px; /* Provide padding to increase the clickable area */
+  }
+  
+/* Sidebar styling for flex item */
+#leftsidebar {
+    width: 200px; /* Set width for the sidebar */
+    flex: 0 0 200px; /* Flex basis to 200px and don't allow it to grow or shrink */
+    padding: 20px;
+    /* ... other styles remain unchanged */
+    order: 1; /* Ensures that the sidebar comes first in the layout */
+  }
+  
+
+/* Main content area styling for flex item */
+#main {
+    flex-grow: 1; /* Allows the main content area to grow */
+    /* Remove margin and width calculations since flexbox will handle it */
+    padding: 20px;
+    order: 2; /* Ensures that the main content comes after the sidebar */
+  }
+
+/* Logo styling */
+#logo {
+  margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+/* Media query adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+    #wrapper {
+      flex-direction: column; /* Stack sidebar and main content on smaller screens */
+    }
+  
+    #leftsidebar, #main {
+      width: 100%; /* Full width for small screens */
+      flex-basis: auto; /* Auto width for small screens */
+      order: unset; /* Keep the document flow as is for mobile */
+    }
+  
+    #nav ul {
+      flex-direction: row; /* Horizontal nav for small screens */
+    }
+  
+    #nav li {
+      display: inline-block; /* Side by side on small screens */
+    }
+  }

@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}
+			Basic Site Template
+			{% endblock title %}
+		</title>
+		<link href="{% static 'main2.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'favicon.ico' %}" rel="icon" type="image/x-icon">
+	</head>
+	<body>
+	<div id="wrapper">
+			<header id="header">
+				<div id="logo"><img src="{% static 'logopng' %}" alt=""/></div>
+				<div id="topbanner"><img src="{% static 'banner.png' %}" width="1150" height="114" alt=""/></div>
+			</header>
+			<nav id="nav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/authors">Authors</a></li>
+					<li><a href="/books">Books</a></li>
+					<li><a href="/rate">Rate a Book</a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</nav>
+		    </aside>
+			<section id="main">
+				{% block main_content %}
+				<h1>{{ title }}</h1>
+				{% autoescape off %}
+				<p>{{ content}}</p>
+				{% endautoescape %}
+				{% endblock main_content %}
+			</section>
+			<footer id="footer">Copyright &copy; 2024 Humayun Awan</footer>
+	</div>
+	</body>
+</html>
