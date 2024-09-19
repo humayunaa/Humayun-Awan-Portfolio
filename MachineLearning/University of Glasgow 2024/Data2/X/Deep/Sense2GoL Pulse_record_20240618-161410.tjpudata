@@ -1,0 +1,30 @@
+IFAT
+### Header must not be changed. Following definitions used for parameters.
+## Target_Departing_Bool = {false = 0, true = 1}
+## Target_Approaching_Bool = {false = 0, true = 1}
+## Motion_Detected_Bool = {no_motion = 0, motion = 1}
+# File_Format_Version = 1.0
+# Device_Name = Sense2GoL Pulse
+# FW_Version = v3.0.0
+# Pulse_Width_us = 5.0
+# Sampling_Freq_Hz = 2000.0
+# Samples_per_Frame = 128
+# Samples_Skip_Count = 40.0
+# Frame_Rate_Hz = 6.667
+# Min_Speed_mps = 0.20000000298023224
+# Max_Speed_mps = 3.0
+# Motion_Sensitivity = 10.0
+# Direction_Sensitivity = 50.0
+# Current_Consumption_mA = 0.486549973487854
+## <Result_Count, Frame_Count, Velocity_mps, FFT_Magnitude_Peak, Doppler_Freq_Hz, Motion_Detected_Bool, Target_Departing_Bool, Target_Approaching_Bool >
+
+< 32480, 32876, 0.0, 2.4296627, 0.0, 0, 0, 0 >
+< 32481, 32877, 0.0, 3.469616, 0.0, 0, 0, 0 >
+< 32482, 32878, 0.0, 2.2190337, 0.0, 0, 0, 0 >
+< 32483, 32879, 0.0, 5.780327, 0.0, 0, 0, 0 >
+< 32484, 32880, 0.0, 5.2920685, 0.0, 0, 0, 0 >
+< 32485, 32881, 0.0, 2.0050437, 0.0, 0, 0, 0 >
+< 32486, 32882, 0.0, 3.980017, 0.0, 0, 0, 0 >
+< 32487, 32883, 0.0, 2.5026255, 0.0, 0, 0, 0 >
+< 32488, 32884, 0.0, 2.8638532, 0.0, 0, 0, 0 >
+< 32489, 32885, 0.0, 4.218169, 0.0, 0, 0, 0 >
