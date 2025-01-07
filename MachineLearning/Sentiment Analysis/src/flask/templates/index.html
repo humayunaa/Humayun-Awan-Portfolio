@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Review Classifier</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+			padding: 20px 50px; /* Leave space on left and right */
+        }
+
+        h1 {
+            color: #225da0;
+        }
+
+        p {
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 20%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Film Review Classifier</h1>
+        <p>Use a 5-model Voting Ensemble trained on IMDb reviews to classify your film review.</p>
+        <form method="POST" action="/predict">
+            <label for="review">Enter your review below:</label>
+            <input type="text" name="review" id="review" placeholder="Type your review here..." required>
+            <button type="submit">Submit</button>
+        </form>
+        <footer>
+            <p>&copy; Humayun Awan</p>
+        </footer>
+    </div>
+</body>
+</html>
